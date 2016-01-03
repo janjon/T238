@@ -14,19 +14,18 @@ exports.showSignin = function (req, res) {
 //signup
 exports.signup = function (req, res) {
     var _user = req.body.user;
-
-    User.find({ name: _user.name }, function (err, user) {
+    User.findOne({ name: _user.name }, function (err, user) {
         if (err) {
             console.log(err);
         }
-
         if (user) {
             return res.redirect('/signin');
         }
         else {
-            var user = new User(_user);
+            var newUser = new User(_user);
 
-            user.save(function (err, user) {
+            newUser.save(function (err, user) {
+                console.log(user);
                 if (err) {
                     console.log(err);
                 }
@@ -48,7 +47,7 @@ exports.signin = function (req, res) {
         if (err) {
             console.log(err);
         }
-
+        console.log(user);
         if (!user) {
             return res.redirect('/signup');
         }
@@ -89,3 +88,25 @@ exports.list = function (req, res) {
         });
     });
 };
+
+// midware for user
+exports.signinRequired = function (req, res, next) {
+    var user = req.session.user;
+    console.log(user);
+    if(!user){
+        res.redirect('/signin');
+    }
+    
+    next();
+};
+
+exports.adminRequired = function (req, res, next) {
+    var user = req.session.user;
+    
+    if(user.role <= 10){
+        res.redirect('/signin');
+    }
+    
+    next();
+};
+
