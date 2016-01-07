@@ -4,17 +4,23 @@ block content
   .container
     .row
       form.form-horizontal(method='post', action='/admin/movie')
-        input(type='hidden',name='movie[_id]', value=movie._id)
+        if movie._id
+          input(type="hidden", name="movie[_id]", value=movie._id)
         .form-group
           label.col-sm-2.control-lable(for='inputCategory') 电影分类
           .col-sm-10
             input#inputCategory.form-control(type='text',name='movie[CategoryName]', value=movie.CategoryName)
         .form-group  
           label.col-sm-2.control-lable 分类选择
-          each cat in categorys
+          each cat in categories
             label.radio-inline
-                input(type='radio',name='movie[category]',value='#{cat._id}')
-                |    #{cat.name}
+                if movie._id
+                    input(type='radio',name='movie[category]',value='#{cat._id}'
+                            checked=cat._id.toString() === movie.category.toString())
+                    |    #{cat.name}
+                else     
+                    input(type='radio',name='movie[category]',value='#{cat._id}')
+                    |    #{cat.name}
         .form-group
           label.col-sm-2.control-lable(for='inputTitle') 电影名字
           .col-sm-10

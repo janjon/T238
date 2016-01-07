@@ -21,27 +21,29 @@ exports.detail = function (req, res) {
     });
 };
 
-// admin page
+// admin new page
 exports.new = function (req, res) {
-    Category
-        .find({}, function (err, categorys) {
-            res.render('admin', {
-                title: 'immoc 后台录入页',
-                movie: {},
-                categorys:categorys
-            });
-        });
+    Category.find({}, function (err, categories) {
+        res.render('admin', {
+            title: 'imooc 后台录入页',
+            categories: categories,
+            movie: {}
+        })
+    })
 };
 
 exports.update = function (req, res) {
     var id = req.params.id;
     if (id) {
         Movie.findById(id, function (err, movie) {
-            res.render('admin', {
-                title: 'immoc 后台更新页',
-                movie: movie
-            });
-        })
+            Category.find({}, function (err, categories) {
+                res.render('admin', {
+                    title: 'immoc 后台更新页',
+                    movie: movie,
+                    categories:categories
+                });
+            })
+        });
     }
 };
 
@@ -72,9 +74,9 @@ exports.save = function (req, res) {
             if (err) {
                 console.log(err);
             }
-            Category.findById(categoryId,function(err,category) {
+            Category.findById(categoryId, function (err, category) {
                 category.movies.push(movie._id);
-                category.save(function(err,category) {
+                category.save(function (err, category) {
                     res.redirect('/movie/' + movie._id);
                 });
             })

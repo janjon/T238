@@ -9,6 +9,8 @@ exports.index = function (req, res) {
             if (err) {
                 console.log(err);
             }
+            
+            console.log(categorys);
             res.render('index', {
                 title: 'immoc 首页',
                 categorys: categorys
