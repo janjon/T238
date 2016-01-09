@@ -1,12 +1,20 @@
 var _ = require('underscore');
 var Movie = require('../models/movie');
 var Comment = require('../models/comment');
-var Category = require('../models/category')
+var Category = require('../models/category');
+var fs = require('fs');
+var path = require('path');
+
 // detail page
 exports.detail = function (req, res) {
     var id = req.params.id;
 
     Movie.findById(id, function (err, movie) {
+        Movie.update({_id:id},{$inc:{pv:1}},function(err) {
+            if(err){
+                console.log(err);
+            }
+        })
         Comment
             .find({ movie: id })
             .populate('from', 'name')
@@ -40,12 +48,37 @@ exports.update = function (req, res) {
                 res.render('admin', {
                     title: 'immoc 后台更新页',
                     movie: movie,
-                    categories:categories
+                    categories: categories
                 });
             })
         });
     }
 };
+
+// admin poster
+exports.savePoster = function(req, res, next) {
+  var posterData = req.files.uploadPoster
+  var filePath = posterData.path
+  var originalFilename = posterData.originalFilename
+  console.log(req);
+  
+  if (originalFilename) {
+    fs.readFile(filePath, function(err, data) {
+      var timestamp = Date.now()
+      var type = posterData.type.split('/')[1]
+      var poster = timestamp + '.' + type
+      var newPath = path.join(__dirname, '../../', '/public/upload/' + poster)
+
+      fs.writeFile(newPath, data, function(err) {
+        req.params.poster = poster
+        next()
+      })
+    })
+  }
+  else {
+    next()
+  }
+}
 
 exports.save = function (req, res) {
     var movieObj = req.body.movie;
@@ -69,18 +102,36 @@ exports.save = function (req, res) {
     }
     else {
         _movie = new Movie(movieObj);
-        var categoryId = _movie.category;
+        var categoryId = movieObj.category
+        var categoryName = movieObj.categoryName
+
         _movie.save(function (err, movie) {
             if (err) {
-                console.log(err);
+                console.log(err)
             }
-            Category.findById(categoryId, function (err, category) {
-                category.movies.push(movie._id);
+            if (categoryId) {
+                Category.findById(categoryId, function (err, category) {
+                    category.movies.push(movie._id)
+
+                    category.save(function (err, category) {
+                        res.redirect('/movie/' + movie._id)
+                    })
+                })
+            }
+            else if (categoryName) {
+                var category = new Category({
+                    name: categoryName,
+                    movies: [movie._id]
+                })
+
                 category.save(function (err, category) {
-                    res.redirect('/movie/' + movie._id);
-                });
-            })
-        });
+                    movie.category = category._id
+                    movie.save(function (err, movie) {
+                        res.redirect('/movie/' + movie._id)
+                    })
+                })
+            }
+        })
     }
 };
 
