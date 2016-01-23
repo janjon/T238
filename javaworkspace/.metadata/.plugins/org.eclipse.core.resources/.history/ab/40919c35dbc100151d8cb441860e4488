@@ -1,0 +1,40 @@
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * 具体的目标对象，负责把有关状态存入到相应的观察者对象中
+ * @author lzz
+ *
+ */
+public class ConcreteSubject extends Subject {
+	
+	
+	
+private List<Observer> observers = new ArrayList<Observer>();
+	
+	/**
+	 * 增加一个观察者
+	 * @param observer
+	 */
+	public void attach(Observer observer){
+		observers.add(observer);
+	}
+	
+	/**
+	 * 删除集合中的指定观察者
+	 * @param observer
+	 */
+	public void dettach(Observer observer) {
+		observers.remove(observer);
+	}
+	
+	/**
+	 * 通知所有注册的观察者对象
+	 */
+	protected void notifyObserver() {
+		for (Observer observer : observers) {
+			observer.update(this);
+		}
+	}
+	
+}

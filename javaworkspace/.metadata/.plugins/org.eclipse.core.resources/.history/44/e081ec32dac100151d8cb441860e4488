@@ -1,0 +1,11 @@
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * 具体的观察者对象，实现更新的方法，使自身的状态和目标状态一致
+ * @author lzz
+ *
+ */
+public class ConcreteObserver implements Observer {
+	private List<Observer> observers = new ArrayList<Observer>();
+}
