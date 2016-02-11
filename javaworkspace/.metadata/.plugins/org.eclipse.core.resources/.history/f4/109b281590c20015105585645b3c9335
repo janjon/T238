@@ -1,0 +1,5 @@
+package com.immoc.pattern.cor.handler;
+
+public class PriceHandlerFactory {
+
+}

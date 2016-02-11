@@ -1,0 +1,36 @@
+package com.immoc.pattern.cor;
+
+import java.util.Random;
+
+import com.immoc.pattern.cor.handler.PriceHandler;
+import com.immoc.pattern.cor.handler.PriceHandlerFactory;
+
+/**
+ * 客户，请求折扣
+ * @author lzz
+ *
+ */
+public class Custom {
+	private PriceHandler priceHandler;
+	
+	public void setPriceHandler(PriceHandler priceHandler) {
+		this.priceHandler = priceHandler;
+	}
+
+	public void requestDiscount(float discount) {
+		priceHandler.proccessDiscount(discount);
+	}
+	
+	public static void main(String[] args) {
+		Custom custom = new Custom();
+		
+		custom.setPriceHandler(PriceHandlerFactory.createPriceHandler());
+		
+		Random random = new Random();
+		
+		for (int i = 0; i < 100; i++) {
+			System.out.println(++i+":");
+			custom.requestDiscount(random.nextFloat());
+		}
+	}
+}

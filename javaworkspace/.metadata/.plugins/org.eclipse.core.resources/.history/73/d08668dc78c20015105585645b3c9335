@@ -1,0 +1,11 @@
+package com.immoc.pattern.cor.handler;
+
+public class VicePresident extends PriceHandler {
+
+	@Override
+	public void proccessDiscount(float discount) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

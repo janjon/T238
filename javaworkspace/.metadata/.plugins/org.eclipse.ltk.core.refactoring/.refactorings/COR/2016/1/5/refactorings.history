@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;com.immoc.pattern.cor.handler.PriceHandler.createPriceHandler()&apos; to &apos;com.immoc.pattern.cor.handler.PriceHandlerFactory&apos;&#x0A;- Original project: &apos;COR&apos;&#x0A;- Original element: &apos;com.immoc.pattern.cor.handler.PriceHandler.createPriceHandler()&apos;&#x0A;- Destination type: &apos;com.immoc.pattern.cor.handler.PriceHandlerFactory&apos;" delegate="false" deprecate="true" description="Move member &apos;createPriceHandler&apos;" element1="/src&lt;com.immoc.pattern.cor.handler{PriceHandler.java[PriceHandler~createPriceHandler" flags="589830" id="org.eclipse.jdt.ui.move.static" input="/src&lt;com.immoc.pattern.cor.handler{PriceHandlerFactory.java[PriceHandlerFactory" stamp="1453635979078" version="1.0"/>
+</session>

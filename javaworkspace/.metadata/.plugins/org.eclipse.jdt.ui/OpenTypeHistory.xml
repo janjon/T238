@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=ObserverPatternCommon/\/Library\/Java\/JavaVirtualMachines\/jdk1.8.0_71.jdk\/Contents\/Home\/jre\/lib\/rt.jar&lt;java.lang(Object.class[Object" modifiers="33" timestamp="1450827058000"/>
+<typeInfo handle="=ObserverPatternCommon/src&lt;{Observer.java[Observer" modifiers="513" timestamp="1453558195000"/>
+<typeInfo handle="=WeatherObserverPattern-4.3/\/Library\/Java\/JavaVirtualMachines\/jdk1.8.0_71.jdk\/Contents\/Home\/jre\/lib\/rt.jar&lt;java.util(Observable.class[Observable" modifiers="33" timestamp="1450827058000"/>
+<typeInfo handle="=WeatherObserverPattern-4.3/\/Library\/Java\/JavaVirtualMachines\/jdk1.8.0_71.jdk\/Contents\/Home\/jre\/lib\/rt.jar&lt;java.util(Observer.class[Observer" modifiers="1537" timestamp="1450827058000"/>
+<typeInfo handle="=WeahterObserverPattern-5.2/src&lt;{WeatherSubject.java[WeatherSubject" modifiers="1025" timestamp="1453618681000"/>
+<typeInfo handle="=WeahterObserverPattern-5.2/src&lt;{Observer.java[Observer" modifiers="513" timestamp="1453618811000"/>
+<typeInfo handle="=COR/src&lt;com.immoc.pattern.cor.handler{PriceHandler.java[PriceHandler" modifiers="1025" timestamp="1453635982000"/>
+<typeInfo handle="=COR/src&lt;com.immoc.pattern.cor.handler{PriceHandlerFactory.java[PriceHandlerFactory" modifiers="1" timestamp="1453635979000"/>
+</typeInfoHistroy>

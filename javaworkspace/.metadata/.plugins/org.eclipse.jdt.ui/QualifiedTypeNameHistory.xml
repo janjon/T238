@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.Void"/>
+<fullyQualifiedTypeName name="org.omg.CORBA.PUBLIC_MEMBER"/>
+<fullyQualifiedTypeName name="Subject"/>
+<fullyQualifiedTypeName name="ConcreteSubject"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Observer"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.xml.internal.resolver.helpers.PublicId"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="Observer"/>
+<fullyQualifiedTypeName name="ConcreteWeatherSubject"/>
+<fullyQualifiedTypeName name="ConcreteObserver"/>
+<fullyQualifiedTypeName name="java.lang.Number"/>
+<fullyQualifiedTypeName name="WeatherSubject"/>
+<fullyQualifiedTypeName name="com.immoc.pattern.cor.Custom"/>
+<fullyQualifiedTypeName name="com.immoc.pattern.cor.handler.Sales"/>
+<fullyQualifiedTypeName name="com.immoc.pattern.cor.handler.Manager"/>
+<fullyQualifiedTypeName name="com.immoc.pattern.cor.handler.Director"/>
+<fullyQualifiedTypeName name="com.immoc.pattern.cor.handler.VicePresident"/>
+<fullyQualifiedTypeName name="com.immoc.pattern.cor.handler.CEO"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="com.immoc.pattern.cor.handler.PriceHandler"/>
+<fullyQualifiedTypeName name="jdk.internal.org.objectweb.asm.Label"/>
+<fullyQualifiedTypeName name="com.immoc.pattern.cor.handler.Lead"/>
+</qualifiedTypeNameHistroy>

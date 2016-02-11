@@ -1,0 +1,10 @@
+
+public class ConcreteWeatherSubject extends WeatherSubject {
+
+	@Override
+	public void notifyObserver() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

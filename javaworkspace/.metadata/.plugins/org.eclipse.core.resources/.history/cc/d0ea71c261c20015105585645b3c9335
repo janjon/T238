@@ -1,0 +1,19 @@
+import java.util.Observable;
+
+/**
+ * 天气目标的具体实现类
+ * 
+ * @author lzz
+ *
+ */
+public class ConcreteWeatherSubject extends Observable {
+	private String content;
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+}

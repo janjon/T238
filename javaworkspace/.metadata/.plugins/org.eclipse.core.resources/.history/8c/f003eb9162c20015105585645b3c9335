@@ -1,0 +1,20 @@
+import java.util.Observable;
+import java.util.Observer;
+
+public class ConcreteObserver implements Observer {
+	//观察者名称
+	private String observerName;
+	
+	public String getObserverName() {
+		return observerName;
+	}
+	public void setObserverName(String observerName) {
+		this.observerName = observerName;
+	}
+	@Override
+	public void update(Observable o, Object arg) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

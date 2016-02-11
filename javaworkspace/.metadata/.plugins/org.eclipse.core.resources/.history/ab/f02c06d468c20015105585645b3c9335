@@ -1,0 +1,19 @@
+
+public class ConcreteWeatherSubject extends WeatherSubject {
+	
+	// "晴天"，"下雨","下雪"
+	// 目标对象的状态
+	private String weatherContent;
+	public String getWeatherContent() {
+		return weatherContent;
+	}
+	public void setWeatherContent(String weatherContent) {
+		this.weatherContent = weatherContent;
+		this.notifyObserver();
+	}
+	@Override
+	public void notifyObserver() {
+		
+	}
+
+}

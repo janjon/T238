@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery</title>
+
+</head>
+<body>
+	<input type="text" id="name" value="">
+	<p id="showName"></p>
+	<script src="http://cdn.bootcss.com/jquery/2.2.0/jquery.js"></script>
+	<script type="text/javascript">
+		$("#name").on('keyup paste',function () {
+			var value = this.value;
+
+			$("#showName").text(value);
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+package com.immoc.pattern.cor;
+
+import com.immoc.pattern.cor.handler.PriceHandler;
+
+/**
+ * 客户，请求折扣
+ * @author lzz
+ *
+ */
+public class Custom {
+	private PriceHandler priceHandler;
+	
+	public void setPriceHandler(PriceHandler priceHandler) {
+		this.priceHandler = priceHandler;
+	}
+
+	public void requestDiscount(float discount) {
+		priceHandler.proccessDiscount(discount);
+	}
+	
+	public static void main(String[] args) {
+		Custom custom = new Custom();
+		
+		custom.setPriceHandler(PriceHandler.createPriceHandler());
+	}
+}

@@ -1,0 +1,25 @@
+
+public class ConcreteObserver implements Observer {
+
+	private String observerName;
+	private String weatherContent;
+	private String remindThing;
+	@Override
+	public void update(WeatherSubject subject) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void setObserverName(String observerName) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public String getObserverName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
