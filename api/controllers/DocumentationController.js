@@ -88,7 +88,7 @@ module.exports = {
           }
 
           Documentation.update({ id: id }, document).exec(function(err, updated) {
-            console.log(updated);                       //返回的是创建的对象
+            console.log(updated);                      
             return res.ok(updated);
 
           })

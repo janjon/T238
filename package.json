@@ -21,13 +21,10 @@
     "include-all": "~0.1.6",
     "rc": "1.0.1",
     "sails": "~0.12.3",
-<<<<<<< HEAD
     "sails-disk": "~0.10.9",
     "sails-postgresql": "^0.12.1",
-    "skipper-disk": "^0.5.4"
-=======
+    "skipper-disk": "^0.5.4",
     "sails-disk": "~0.10.9"
->>>>>>> 5b60d5368af7b699a781df8b3b86136ffad4dbf2
   },
   "scripts": {
     "debug": "node debug app.js",
@@ -40,8 +37,4 @@
   },
   "author": "lzz",
   "license": ""
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 5b60d5368af7b699a781df8b3b86136ffad4dbf2

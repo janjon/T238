@@ -1,7 +1,6 @@
 # T238
 
 a [Sails](http://sailsjs.org) application
-<<<<<<< HEAD
 ## 开发者
 - 安装sails
 $ npm install -g sails
@@ -19,5 +18,3 @@ $ sails lift 或者 npm start
 项目结构 sails mvc 框架，遵守 restful 规范
 调用方式 http://localhost:1337/documentation
 使用 restful 的调用方式来调用相应的功能即可。
-=======
->>>>>>> 5b60d5368af7b699a781df8b3b86136ffad4dbf2

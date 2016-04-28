@@ -16,17 +16,9 @@ module.exports = {
    * Set the default database connection for models in the production        *
    * environment (see config/connections.js and config/models.js )           *
    ***************************************************************************/
-
-<<<<<<< HEAD
   models: {
     connection: 'localPostgresqlServer'
   },
-=======
-  // models: {
-  //   connection: 'someMysqlServer'
-  // },
->>>>>>> 5b60d5368af7b699a781df8b3b86136ffad4dbf2
-
   /***************************************************************************
    * Set the port in the production environment to 80                        *
    ***************************************************************************/

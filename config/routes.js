@@ -34,11 +34,7 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-<<<<<<< HEAD
   },
-=======
-  }
->>>>>>> 5b60d5368af7b699a781df8b3b86136ffad4dbf2
 
   /***************************************************************************
   *                                                                          *
@@ -49,10 +45,6 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
-<<<<<<< HEAD
   'POST /documentation/:id/upload': 'DocumentationController.upload',
-  'GET /documentation/:id/download': 'DocumentationController.download',
-=======
-
->>>>>>> 5b60d5368af7b699a781df8b3b86136ffad4dbf2
+  'GET /documentation/:id/download': 'DocumentationController.download'
 };
